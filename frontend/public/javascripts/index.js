@@ -9,6 +9,8 @@ window.onload = () => {
       data: {
         code: editor.getValue()
       } 
+    }).catch(e => {
+      console.log(e);
     })
     loadingCircle.classList.remove('hidden');
     setTimeout(() => {
