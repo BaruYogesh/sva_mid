@@ -1,0 +1,64 @@
+.editor-container {
+  height: 600px;
+}
+#editor {
+  height: 100%;
+  position: relative;
+}
+.grid {
+  display: grid;
+  margin: auto;
+  width: 50%;
+  grid-template-columns: 50% 50%;
+}
+.grid-item {
+  width: 100%;
+}
+#response {
+  background-color: slategray;
+  height: 100%;
+  font-family: 'Courier New', monospace;
+}
+
+.run {
+  margin: auto;
+  width: 50%;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.run-button {
+  margin: auto;
+  background-color: slategray;
+  height: 40px;
+  line-height: 40px;
+  width: 55px;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  border: 3px solid black;
+  margin-bottom: 10px;
+}
+
+.run-button:hover {
+  cursor: pointer;
+}
+
+.loader {
+  margin: auto;
+  width: 50%;
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 60%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none;
+}

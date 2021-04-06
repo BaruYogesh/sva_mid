@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>demo</title>
+<style type="text/css" media="screen">
+    #editor { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+</style>
+<link rel='stylesheet' href="stylesheets/index.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+<script src='javascripts/index.js'></script>
+</head>
+<body>
+    <div class='grid'>
+        <div class='grid-item'>
+            <div class='editor-container'>
+                <div id="editor"></div>
+            </div>
+        </div>
+        <div class='grid-item'>
+            <div id='response'></div>
+        </div>
+    </div>
+
+    <div class='run'>
+        <div class='run-button'>Run</div>
+        <div class="loader hidden"></div> 
+
+    </div>
+    
+      
+    <script src="https://pagecdn.io/lib/ace/1.4.12/ace.js" crossorigin="anonymous" integrity="sha256-Q9hnBpgBFstzZOr+OKFOWZWfcF5nFXO8Qz48Nmndo6U=" ></script>
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/python");
+        editor.resize(true);
+    </script>
+</body>
+</html>
