@@ -6,6 +6,7 @@ var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var scriptRouter = require('./routes/script');
 
 var app = express();
 
@@ -18,11 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
-app.get('/script', (req, res, next) => {
-  res.json({
-    'response': 'done'
-  });
-})
+app.use('/script', scriptRouter);
 
 module.exports = app;
